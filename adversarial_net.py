@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 #from pprint import pprint
 srng = RandomStreams()
 
-TRAINING = True
+TRAINING = False
 
 # Convert into correct type for theano
 def floatX(X):
@@ -100,6 +100,7 @@ updates = RMSprop(cost, params, lr=0.001)
 
 # Define train and predict theano functions
 train = theano.function(inputs=[X, Y], outputs=cost, updates=updates, allow_input_downcast=True)
+
 predict = theano.function(inputs=[X], outputs=y_x, allow_input_downcast=True)
 predict_conf = theano.function(inputs=[X], outputs=y_x1, allow_input_downcast=True)
 if TRAINING:
@@ -146,7 +147,7 @@ for i in range(len(teY)):
             Yts.append(j)
 
 #============================Parameter to change ========================================#
-eps_values = [0.12, 0.15, 0.17, 0.20]  
+eps_values = [0.10, 0.25]  
 #========================================================================================#
 
 for EPS in eps_values:
@@ -160,15 +161,15 @@ for EPS in eps_values:
    # Find accuracy of the classifier on the test set and adversarial set
     pred_teY = predict(teX)
     print 'Test set Accuracy:					', np.mean(np.argmax(teY, axis=1) == predict(teX)) 
-    print 'Adversarial set Accuracy, e=', eps, ':					', np.mean(np.argmax(teY, axis=1) == predict(adX))		#np.mean(predict(adX)!=Yts)
+    print 'Adversarial set Accuracy, e=', eps, ':			', np.mean(np.argmax(teY, axis=1) == predict(adX))		#np.mean(predict(adX)!=Yts)
     print 'Test Set Confidence:					', np.mean(predict_conf(teX))
     print 'Adversarial set Confidence:				', np.mean(predict_conf(adX))
     count_attack = 0
     for i in range(len(teX)):     
        plot_mnist_digit(teX[i], adX[i], 'test_img{0}.jpg'.format(i),'less_ad_img{0}.jpg'.format(i))
 
-    print 'Percent of successful adversarial attack:{0:3f}:					' .format(float(count_attack*100)/len(teX))
-    print '======================================================================================'
+    print 'Percent of successful adversarial attack:{0:3f}:							' .format(float(count_attack*100)/len(teX))
+    print '================================================================================'
 
 
 
