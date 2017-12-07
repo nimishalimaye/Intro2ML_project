@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 #from pprint import pprint
 srng = RandomStreams()
 
-TRAINING = False
+TRAINING = True
 
 # Convert into correct type for theano
 def floatX(X):
@@ -90,8 +90,8 @@ l1 = abs(w_h).sum() + abs(w_h2).sum() + abs(w_o).sum()
 l2 = (w_h**2).sum() + (w_h2**2).sum() + (w_o**2).sum()
 
 #=================== Parameters to chnge ===============================#
-l1coef = 0.0001 #changed from 0.0001 to 0.01 NL1206 
-l2coef = 0.0001 #changed from 0.0001 to 0.01 NL1206
+l1coef = 0.00001 #changed from 0.0001 to 0.01 NL1206 
+l2coef = 0.00001 #changed from 0.0001 to 0.01 NL1206
 #=======================================================================#
 
 
