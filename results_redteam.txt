@@ -1,0 +1,20 @@
+for l1coef = 0.000100, l2coef = 0.000100
+Training MNIST data...
+(0, ':  ', 0.91459999999999997)
+(1, ':  ', 0.94299999999999995)
+(2, ':  ', 0.95179999999999998)
+(3, ':  ', 0.95620000000000005)
+(4, ':  ', 0.95760000000000001)
+('Accuracy is:    ', 0.95760000000000001)
+('Confidence is:    ', 0.94753074369174195)
+Adversarial set Accuracy, e= 0.1 :			0.5305
+Adversarial set Confidence:				0.753458184966
+Percent of successful adversarial attack:43.090000:				
+================================================================================
+Adversarial set Accuracy, e= 0.25 :			0.0363
+Adversarial set Confidence:				0.742340193165
+Percent of successful adversarial attack:92.790000:				
+================================================================================
+Adversarial set Accuracy, e= 0.3 :			0.0173
+Adversarial set Confidence:				0.759432119774
+Percent of successful adversarial attack:94.780000:		
