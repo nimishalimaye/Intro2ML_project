@@ -1,4 +1,6 @@
-# Intro2ML_project
+# EL-GY 9123: Introduction to Machine Learning (Graduate) Project
+## Team Members: Nimisha Satish Limaye (nsl278) and Monica Reddy Tirupari (mrt374)
+
 This is an optional project for graduate coursework in Introduction to Machine Learning at NYU Tandon School of Engineering. We are working on Adversarial Machine learning on MNIST dataset.
 
 - ML_Project_final.pdf contains the Report in .pdf format.
