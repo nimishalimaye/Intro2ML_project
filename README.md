@@ -12,3 +12,5 @@ This is an optional project for graduate coursework in Introduction to Machine L
 - red_team.ipynb contains code for attacking the network. It produces results given in figure 1 and table 3 in the report.
 
 - Optimal_Epsilon_Calculation contains code for optimal epsilon value to attack the model to achieve lower accuracy or lower confidence. Figures 2 and 3 in the report are obtained using this code.
+
+- Citations and our contributions to the code are given in the jupyter notebook.
